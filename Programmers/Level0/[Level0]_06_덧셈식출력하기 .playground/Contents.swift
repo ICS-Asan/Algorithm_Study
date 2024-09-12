@@ -9,6 +9,24 @@ import Foundation
  1 ≤ a, b ≤ 100
  */
 
+func solution() {
+    let input = readLine()
+
+    guard
+        let inputStrings = input?.components(separatedBy: " "),
+        inputStrings.count == 2,
+        let firstNumber = Int(inputStrings[0]),
+        firstNumber >= 1,
+        firstNumber <= 100,
+        let secondNumber = Int(inputStrings[1]),
+        secondNumber >= 1,
+        secondNumber <= 100
+    else { return }
+
+    print("\(firstNumber) + \(secondNumber) = \(firstNumber + secondNumber)")
+}
+
+solution()
 /*
  <정확성 테스트>
  
